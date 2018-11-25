@@ -1,0 +1,7 @@
+/.ropeproject
+/.cache
+/.env
+/results
+__pycache__
+*/pid
+*~

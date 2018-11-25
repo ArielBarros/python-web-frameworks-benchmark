@@ -1,0 +1,5 @@
+flask
+redis
+marshmallow
+gunicorn
+meinheld
