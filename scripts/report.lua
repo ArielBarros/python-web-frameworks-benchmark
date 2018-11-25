@@ -1,7 +1,3 @@
-wrk.method = "POST"
-wrk.body   = '{"key_name": "1"}'
-wrk.headers["Content-Type"] = "application/json"
-
 done = function(summary, latency, requests)
    io.write(string.format("\nSocket connection errors: %s\n", summary.errors.connect))
    io.write(string.format("Socket read errors: %s\n", summary.errors.read))

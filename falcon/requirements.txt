@@ -1,4 +1,6 @@
 falcon
 redis
+jinja2
+marshmallow
 gunicorn
 meinheld

@@ -29,19 +29,14 @@ def template():
     return bottle.template('template', people=people)
 
 @app.route('/database', method='POST')
-# @app.route('/database', method='GET')
 def database():
-	# return bottle.BaseRequest.json
-	return "banco de dados"
-  #   data, errors = SimpleSchema.load(bottle.BaseRequest.json)
-  #   if not errors:
-  #       value = r.get(data['key_name'])
-  #       # return value # ver isso roda de boa
-		# return "banco de dados"
+    data, errors = SimpleSchema.load(bottle.request.json)
+    if not errors:
+        value = r.get(data['key_name'])
+        return value
 
 @app.route('/')
 def hello():
     return "Hello World!"
 
-# run(host='0.0.0.0', port=5000, debug=True)
-
+bottle.debug(True)
