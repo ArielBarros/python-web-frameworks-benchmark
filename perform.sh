@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# usage: ./perform.sh <framework> <scenario>
-# Make sure that the hierarchy within results directory has been created
+# Usage: ./perform.sh <framework> <scenario>
+
+# Create results directory hierarchy
+mkdir -p results/{flask,bottle,falcon}/{hello,template,database}
 
 CONNECTIONS=(100 200 300 400 500 600 700 800 900 1000 2000 3000 4000 5000)
 case "$2" in
